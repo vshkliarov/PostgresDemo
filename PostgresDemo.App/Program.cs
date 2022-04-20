@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using NpgsqlTypes;
+using PostgresDemo.App.Models;
 
 namespace PostgresDemo.App;
 
@@ -20,7 +21,7 @@ class Program
                 
             // Create
             Console.WriteLine("Inserting a new weather");
-            db.Add(new Models.Weather { WeatherId = 3, City = "Shakhtersk", TempLo = 0, TempHi = 25, Prcp = 0, Date = new DateOnly(2022, 03, 30)});
+            db.Add(new Weather { WeatherId = 4, City = "Toronto", TempLo = 0, TempHi = 25, Prcp = 0, Date = new DateOnly(2022, 03, 31)});
             db.SaveChanges();
 
             // Read

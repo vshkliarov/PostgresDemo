@@ -3,15 +3,16 @@ using System.IO;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using PostgresDemo.App.Models;
 
 namespace PostgresDemo.App;
 
 public class PostgresDemoContext : DbContext
 {
 
-    public DbSet<Models.City> Cities { get; set; }
-    public DbSet<Models.Weather> Weathers { get; set; }
-    public DbSet<Models.State> States { get; set; }
+    public DbSet<City> Cities { get; set; }
+    public DbSet<Weather> Weathers { get; set; }
+    public DbSet<State> States { get; set; }
 
     public string DbPath { get; }
 
